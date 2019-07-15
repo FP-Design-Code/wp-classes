@@ -82,9 +82,7 @@ abstract class SubPage
 
         $this->capability = $capability;
 
-        if (empty($GLOBALS['admin_page_hooks'][$this->slug])) {
-            $this->register();
-        }
+        $this->register();
     }
 
     /**
