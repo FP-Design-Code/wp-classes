@@ -82,7 +82,7 @@ abstract class Page
     {
         $this->page_title = $page_title;
         $this->menu_title = $menu_title;
-        $this->slug = is_null($slug) ? $title_singular : $slug;
+        $this->slug = is_null($slug) ? $page_title : $slug;
         $this->slug = sanitize_key($this->slug);
 
         $this->capability = $capability;
