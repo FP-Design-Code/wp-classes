@@ -46,7 +46,7 @@ abstract class Endpoint
      */
     public function __construct($prefix, $endpoint, $version)
     {
-        $this->base = $prefix . $version;
+        $this->base = $prefix . '/' . $version;
         $this->endpoint = $endpoint;
     }
 
