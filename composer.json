@@ -1,6 +1,6 @@
 {
 	"name": "floatingpoint/wp-classes",
-	"type": "wordpress-plugin",
+	"type": "library",
 	"description": "Classes that extend WordPress components for use in Floaitng-Point plugins/sites.",
 	"keywords": [],
 	"homepage": "https://floating-point.com",
@@ -12,10 +12,6 @@
 			"homepage": "https://floating-point.com"
 		}
 	],
-	"require": {},
-	"require-dev": {
-		"phpdocumentor/phpdocumentor": "2.*"
-	},
 	"autoload": {
 		"psr-4": {
 			"FloatingPoint\\Wp\\": "src/"
