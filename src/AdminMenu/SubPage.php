@@ -1,18 +1,29 @@
 <?php
 
-namespace FloatingPoint\Wp;
+namespace FloatingPoint\Wp\AdminMenu;
 
 /**
- * Base class for regisering admin menu pages with WordPress
+ * Base class for regisering admin sub menu pages with WordPress
  *
  * @since 1.0.0
  *
  * @package	FloatingPoint\Wp
  * @author	FloatingPoint
  */
-abstract class MenuPage
+abstract class SubPage
 {
     /**
+     * Parent Page Slug
+	 *
+	 * The slug of the menu page to add this sub page to
+     *
+     * @since    1.0.0
+     * @access   public
+     * @var      string    $parent_slug
+     */
+	public $parent_slug;
+
+	/**
      * The Page Title
      *
      * @since    1.0.0
@@ -47,35 +58,18 @@ abstract class MenuPage
      * @access   private
      * @var      string    $menu_slug
      */
-    private $slug;
-
-    /**
-     * THow high to display the page
-     *
-     * @since    1.0.0
-     * @access   private
-     * @var      int    $position
-     */
-    private $position;
-
-    /**
-     * The post type icon
-     *
-     * @since    1.0.0
-     * @access   private
-     * @var      string    $icon    Icon
-     */
-    private $icon;
+	private $slug;
 
     /**
      * Initialize the class and set its properties.
      *
      * @since    1.0.0
-     * @param      string	$title       		The title of the page.
-     * @param      string	$slug				URL Slug of page.( optional )
-     * @param      string	$icon				Icon in the menu.( optional )
-     * @param      int    	$position			Position in the menu.( optional )
-     * @param      array    $args				Overide any arguments
+     * @param      string	$page_title			The title of the page.
+     * @param      string	$menu_title			The title for the menu link text
+     * @param      string	$capability			WordPress capabilities  required to see the page
+     * @param      string	$slug				Menu Slug (optional)
+     * @param      array    $icon				Icon for the menu link
+     * @param      int		$position			Where to place the menu item
      */
     public function __construct($page_title, $menu_title, $capability, $slug = null, $icon = null, $position = null)
     {
