@@ -44,28 +44,28 @@ abstract class Page
      * The slug for the page
      *
      * @since    1.0.0
-     * @access   private
+     * @access   public
      * @var      string    $menu_slug
      */
-    private $slug;
+    public $slug;
 
     /**
      * THow high to display the page
      *
      * @since    1.0.0
-     * @access   private
+     * @access   public
      * @var      int    $position
      */
-    private $position;
+    public $position;
 
     /**
      * The post type icon
      *
      * @since    1.0.0
-     * @access   private
+     * @access   public
      * @var      string    $icon    Icon
      */
-    private $icon;
+    public $icon;
 
     /**
      * Initialize the class and set its properties.
@@ -99,7 +99,7 @@ abstract class Page
      *
      * @since	1.0.0
      */
-    private function register()
+    public function register()
     {
         add_menu_page(
             $this->page_title,

@@ -55,10 +55,10 @@ abstract class SubPage
      * The slug for the page
      *
      * @since    1.0.0
-     * @access   private
+     * @access   public
      * @var      string    $menu_slug
      */
-    private $slug;
+    public $slug;
 
     /**
      * Initialize the class and set its properties.
@@ -90,7 +90,7 @@ abstract class SubPage
      *
      * @since	1.0.0
      */
-    private function register()
+    public function register()
     {
         add_submenu_page(
             $this->parent_slug,
