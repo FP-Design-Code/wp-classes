@@ -14,16 +14,16 @@ abstract class SubPage
 {
     /**
      * Parent Page Slug
-	 *
-	 * The slug of the menu page to add this sub page to
+     *
+     * The slug of the menu page to add this sub page to
      *
      * @since    1.0.0
      * @access   public
      * @var      string    $parent_slug
      */
-	public $parent_slug;
+    public $parent_slug;
 
-	/**
+    /**
      * The Page Title
      *
      * @since    1.0.0
@@ -58,12 +58,13 @@ abstract class SubPage
      * @access   private
      * @var      string    $menu_slug
      */
-	private $slug;
+    private $slug;
 
     /**
      * Initialize the class and set its properties.
      *
      * @since    1.0.0
+     * @param      string	$parent_slug		Parent page slug.
      * @param      string	$page_title			The title of the page.
      * @param      string	$menu_title			The title for the menu link text
      * @param      string	$capability			WordPress capabilities  required to see the page
@@ -71,16 +72,15 @@ abstract class SubPage
      * @param      array    $icon				Icon for the menu link
      * @param      int		$position			Where to place the menu item
      */
-    public function __construct($page_title, $menu_title, $capability, $slug = null, $icon = null, $position = null)
+    public function __construct($parent_slug, $page_title, $menu_title, $capability, $slug = null, $icon = null, $position = null)
     {
+        $this->parent_slug;
         $this->page_title = $page_title;
         $this->menu_title = $menu_title;
         $this->slug = is_null($slug) ? $title_singular : $slug;
         $this->slug = sanitize_key($this->slug);
 
         $this->capability = $capability;
-        $this->icon = is_null($icon) ? 'dashicons-admin-post' : $icon;
-        $this->position = is_null($position) ? 99 : $position;
 
         if (empty($GLOBALS['admin_page_hooks'][$this->slug])) {
             $this->register();
@@ -94,14 +94,13 @@ abstract class SubPage
      */
     private function register()
     {
-        add_menu_page(
+        add_submenu_page(
+            $this->parent_slug,
             $this->page_title,
             $this->menu_title,
             $this->capability,
             $this->slug,
-            [$this, 'render'],
-            $this->icon,
-            $this->position
+            [$this, 'render']
         );
     }
 
