@@ -74,7 +74,7 @@ abstract class SubPage
      */
     public function __construct($parent_slug, $page_title, $menu_title, $capability, $slug = null, $icon = null, $position = null)
     {
-        $this->parent_slug;
+        $this->parent_slug = $parent_slug;
         $this->page_title = $page_title;
         $this->menu_title = $menu_title;
         $this->slug = is_null($slug) ? $page_title : $slug;
