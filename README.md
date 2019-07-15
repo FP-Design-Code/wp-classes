@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to Floating-Point WordPress Classess 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
-  <a href="license.md">
+  <a href="blob/master/LICENSE.md">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
   <a href="https://twitter.com/floatingpointco">
@@ -47,7 +47,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-This project is [MIT](license.md) licensed.
+This project is [MIT](blob/master/LICENSE.md) licensed.
 
 ---
 
