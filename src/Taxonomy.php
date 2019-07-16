@@ -1,6 +1,6 @@
 <?php
 
-namespace FloatingPoint\FpMetrics\Taxonomies;
+namespace FloatingPoint\Wp;
 
 /**
 * Class to add Taxonomy
