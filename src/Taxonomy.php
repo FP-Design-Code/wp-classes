@@ -7,7 +7,7 @@ namespace FloatingPoint\Wp;
 *
 * Defines all of the pages that need to be in admin area.
 *
-* @package    FpBase
+* @package    Floatingpoint\Wp
 * @author     Eric Sizer <esizer@floating-point.com>
 */
 
