@@ -1,6 +1,6 @@
 <?php
 
-namespace FloatingPoint\Wp;
+namespace FloatingPoint\Wp\Meta;
 
 /**
  * Add a Metabox to WordPress
