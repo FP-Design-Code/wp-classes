@@ -1,6 +1,6 @@
 <?php
 
-namespace FloatingPoint\Wp\Blade;
+namespace FloatingPoint\Wp;
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Container\Container as ContainerInterface;
