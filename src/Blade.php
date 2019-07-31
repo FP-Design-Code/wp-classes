@@ -270,7 +270,8 @@ class Blade implements FactoryContract
     public static function getInstance()
     {
         if (!self::$instance) {
-            self::$instance = new Blade(FP_VIEWS_PATH, FP_CACHE_PATH);
+            $uploadDir = wp_upload_dir();
+            self::$instance = new Blade(Config::getValue('view_path'), $uploadDir['basedir'] . '/cache');
         }
 
         return self::$instance;
