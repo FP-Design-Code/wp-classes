@@ -260,24 +260,4 @@ class Blade implements FactoryContract
             ];
         }, true);
     }
-
-    /**
-     * Get the singleton
-     *
-     * @since	1.0.0
-     * @return self
-     */
-    public static function getInstance()
-    {
-        if (!self::$instance) {
-            $uploadDir = wp_upload_dir();
-            $cachePath = $uploadDir['basedir'] . '/cache';
-            if (!\file_exists($cachePath)) {
-                \wp_mkdir_p($cachePath);
-            }
-            self::$instance = new Blade(Config::getValue('view_path'), $cachePath);
-        }
-
-        return self::$instance;
-    }
 }
