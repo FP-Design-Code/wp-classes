@@ -17,10 +17,6 @@
 			"FloatingPoint\\Wp\\": "src/"
 		}
 	},
-	"require-dev": {
-		"phpdocumentor/phpdocumentor": "~2.8",
-		"cvuorinen/phpdoc-markdown-public": "^0.2.0"
-	},
 	"require": {
 		"illuminate/config": "~5.6",
 		"illuminate/view": "~5.6"
