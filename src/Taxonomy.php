@@ -69,7 +69,7 @@ abstract class Taxonomy
      * @param      string	$plural			The pluralized title
      * @param      string	$args			Wordpress Arguments
      */
-    public function __construct($post_object, $singular, $text_domain = 'fp', $plural, $slug = null, $args = null)
+    public function __construct($post_object, $singular, $plural, $text_domain = 'fp', $slug = null, $args = null)
     {
         $this->post_object = $post_object;
         $this->singular = $singular;
