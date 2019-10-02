@@ -105,7 +105,7 @@ abstract class Taxonomy
             'labels' => array(
                 'name'                       => _x($this->plural, 'Taxonomy General Name', $this->text_domain),
                 'singular_name'              => _x($this->singular, 'Taxonomy Singular Name', $this->text_domain),
-                'menu_name'                  => __($this->singular, $this->text_domain),
+                'menu_name'                  => __($this->plural, $this->text_domain),
                 'all_items'                  => __('All ' . $this->plural, $this->text_domain),
                 'parent_item'                => __('Parent ' . $this->singular, $this->text_domain),
                 'parent_item_colon'          => __('Parent ' . $this->singular . ':', $this->text_domain),
