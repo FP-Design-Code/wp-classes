@@ -23,7 +23,7 @@ class Functions
     public function __construct(array $components = [])
     {
         foreach ($components as $component) {
-            if ($component instanceof Interfaces\ComponentInterface) {
+            if ($component instanceof Interfaces\FunctionInterface) {
                 $this->setFunction($component);
             }
         }
