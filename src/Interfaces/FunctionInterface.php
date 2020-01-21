@@ -1,6 +1,6 @@
 <?php
 
-namespace FpPrograms\Interfaces;
+namespace FloatingPoint\Wp\Interfaces;
 
 /**
  * Interface for Initializable classes
