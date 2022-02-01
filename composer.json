@@ -1,5 +1,5 @@
 {
-	"name": "floatingpoint/wp-classes",
+	"name": "fpdesigncode/wp-classes",
 	"type": "library",
 	"description": "Classes that extend WordPress components for use in Floaitng-Point plugins/sites.",
 	"keywords": [],
